@@ -10,6 +10,13 @@ nvid = []
 nv_counter = 0
 nv_found_counter = 0
 nv_not_found_counter = 0
+
+input('''
+工具说明：在QCN XML文件里获取到指定NV的值
+使用方法：
+1.将QCN XML文件更名为qcn.xml，并放在工具同一目录
+2.在nvid.txt中填入待查询NV号
+3.按Enter获取NV值到result_search.txt文件''')
 with open('qcn.xml') as qcndata:    #打开查找目标QCN xml文件
     for x in qcndata:                 #将QCN xml文件的各条目加入列表nv
         x = x.replace('\n','') 
